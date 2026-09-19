@@ -17,15 +17,26 @@ let selectedSize = "M";
 const productsEl=document.getElementById("products");
 function money(n){return "₹"+n.toLocaleString("en-IN")}
 function renderProducts(filter="all"){
- productsEl.innerHTML="";
- products.filter(p=>filter==="all"||p.cat===filter).forEach(p=>{
-  const el=document.createElement("article"); el.className="product";
-  el.innerHTML=`<div class="product-visual ${p.dark?"darkvis":""}"><div class="tee"><span>${p.name.includes("ORIGIN")?"V":"VAYRA"}</span></div></div><div class="product-info"><div><h3>${p.name}</h3><p>${p.cat}</p></div><span class="price">${money(p.price)}</span></div>`;
-  el.onclick=()=>openProduct(p); productsEl.appendChild(el);
- });
+  productsEl.innerHTML="";
+  products.filter(p=>filter==="all"||p.cat===filter).forEach(p=>{
+    const el=document.createElement("article");
+    el.className="product-card";
+
+    const image = p.name.includes("ORIGIN")
+      ? '<img src="file_0000000d31c8208b91f62dc8c6646f.png" alt="VAYRA ORIGIN Oversized T-Shirt">'
+      : '<div class="product-visual"><div class="tee"><span>VAYRA</span></div></div>';
+
+    el.innerHTML=`
+      <div class="product-visual">${image}</div>
+      <h3>${p.name}</h3>
+      <p>₹${p.price}</p>
+    `;
+
+    el.onclick=()=>openProduct(p);
+    productsEl.appendChild(el);
+  });
 }
 renderProducts();
-
 document.querySelectorAll(".filter").forEach(b=>b.onclick=()=>{document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));b.classList.add("active");renderProducts(b.dataset.filter)});
 
 function openProduct(p){
