@@ -42,14 +42,25 @@ renderProducts();
 document.querySelectorAll(".filter").forEach(b=>b.onclick=()=>{document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));b.classList.add("active");renderProducts(b.dataset.filter)});
 
 function openProduct(p){
- current=p; selectedColor="Black"; selectedSize="M";
- document.getElementById("modalCategory").textContent=p.cat+" / ORIGIN 01";
- document.getElementById("modalName").textContent=p.name;
- document.getElementById("modalPrice").textContent=money(p.price);
- document.getElementById("modalDesc").textContent=p.desc;
- document.getElementById("modalArt").innerHTML=`<div class="tee ${p.dark?"darkvis":""}"><span>${p.name.includes("ORIGIN")?"V":"VAYRA"}</span></div>`;
- renderOptions();
- document.getElementById("productModal").classList.add("show"); document.getElementById("overlay").classList.add("show");
+  current=p; selectedColor="Black"; selectedSize="M";
+  document.getElementById("modalCategory").textContent=p.cat+" / ORIGIN 01";
+  document.getElementById("modalName").textContent=p.name;
+  document.getElementById("modalPrice").textContent=money(p.price);
+  document.getElementById("modalDesc").textContent=p.desc;
+
+  document.getElementById("modalArt").innerHTML =
+    p.id===2
+      ? `<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%;">
+          <img src="file_00000000d31c8208b91f62dc8c6c846f.png" style="width:100%;height:220px;object-fit:cover;border-radius:8px;">
+          <img src="file_0000000082308211bf2ac0ff0a543a87.png" style="width:100%;height:220px;object-fit:cover;border-radius:8px;">
+          <img src="file_00000000e48c8211b8644332199cba57.png" style="width:100%;height:220px;object-fit:cover;border-radius:8px;">
+          <img src="file_000000008aac8211975505363741923e.png" style="width:100%;height:220px;object-fit:cover;border-radius:8px;">
+        </div>`
+      : `<div class="tee ${p.dark?"dark":""}"><span>VAYRA</span></div>`;
+
+  renderOptions();
+  document.getElementById("productModal").classList.add("show");
+  document.getElementById("overlay").classList.add("show");
 }
 function renderOptions(){
  document.getElementById("colorOptions").innerHTML=["Black","Off White","Stone"].map(c=>`<button class="${c===selectedColor?"selected":""}" onclick="selectColor('${c}')">${c}</button>`).join("");
