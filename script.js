@@ -6,6 +6,7 @@ const products = [
  {id:3,name:"VAYRA Essential",price:999,cat:"essential",desc:"A refined everyday essential with the VAYRA wordmark.",dark:false},
  {id:4,name:"VY-01",price:1399,cat:"signature",desc:"A numbered streetwear piece inspired by the beginning of the label.",dark:true},
  {id:5,name:"VAYRA Script",price:1199,cat:"essential",desc:"Soft minimal branding for a quieter expression of VAYRA.",dark:false},
+ {id:6,name:"VAYRA PULSE TEE",price:499,cat:"essential",desc:"A bold oversized tee with a glossy pink PULSE graphic.",dark:true}
 
 
 let cart = JSON.parse(localStorage.getItem("vayraCart") || "[]");
