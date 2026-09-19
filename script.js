@@ -65,7 +65,7 @@ function openProduct(p){
 }
 function renderOptions(){
  document.getElementById("colorOptions").innerHTML=["Black","White"].map(c=>`<button class="${c===selectedColor?"selected":""}" onclick="selectColor('${c}')">${c}</button>`).join("");
- document.getElementById("sizeOptions").innerHTML=["S","M","L","XL"].map(s=>`<button class="${s===selectedSize?"selected":""}" onclick="selectSize('${s}')">${s}</button>`).join("");
+ document.getElementById("sizeOptions").innerHTML=["XS","S","M","L","XL","XXL"].map(s=>`<button class="${s===selectedSize?"selected":""}" onclick="selectSize('${s}')">${s}</button>`).join("");
 }
 
 function selectColor(c){
