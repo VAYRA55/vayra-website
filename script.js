@@ -40,8 +40,7 @@ function renderProducts(filter="all"){
   });
 }
 renderProducts();
-document.querySelectorAll(".filter").forEach(b=>b.onclick=()=>{document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));b.classList.add("active");renderProducts(b.dataset.filter)});
-
+document.querySelectorAll(".filter").forEach(b=>b.onclick=()=>{document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));b.classList.add("active");renderProducts(b.dataset.filter);});
 function openProduct(p){
   current=p; selectedColor="Black"; selectedSize="M";
   document.getElementById("modalCategory").textContent=p.cat+" / ORIGIN 01";
