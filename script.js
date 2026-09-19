@@ -23,7 +23,7 @@ function renderProducts(filter="all"){
     el.className="product-card";
 
     const image = p.name.includes("ORIGIN")
-      file_00000000d31c8208b91f62dc8c6c846f.png
+            ? '<img src="file_00000000d31c8208b91f62dc8c6c846f.png" alt="VAYRA ORIGIN Oversized T-Shirt">'
       : '<div class="product-visual"><div class="tee"><span>VAYRA</span></div></div>';
 
     el.innerHTML=`
