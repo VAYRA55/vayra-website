@@ -27,7 +27,7 @@ function renderProducts(filter="all"){
   p.id===2
     ? '<img src="file_00000000d31c8208b91f62dc8c6c846f.png" alt="ORIGIN Tee">'
     : p.id===6
-    ? '<img src="file_0000000082308211bf2ac0ff0a543a87.png" alt="ORIGIN Black">'
+? '<img src="file_00000000944881fa9aaca149b816dfa1.png" alt="VAYRA PULSE TEE">'
     : '<div class="product-visual"><div class="tee"><span>VAYRA</span></div></div>';
     el.innerHTML=`
       <div class="product-visual">${image}</div>
