@@ -63,11 +63,24 @@ function openProduct(p){
   document.getElementById("overlay").classList.add("show");
 }
 function renderOptions(){
- document.getElementById("colorOptions").innerHTML=["Black","Off White","Stone"].map(c=>`<button class="${c===selectedColor?"selected":""}" onclick="selectColor('${c}')">${c}</button>`).join("");
+ document.getElementById("colorOptions").innerHTML=["Black","White"].map(c=>`<button class="${c===selectedColor?"selected":""}" onclick="selectColor('${c}')">${c}</button>`).join("");
  document.getElementById("sizeOptions").innerHTML=["S","M","L","XL"].map(s=>`<button class="${s===selectedSize?"selected":""}" onclick="selectSize('${s}')">${s}</button>`).join("");
 }
-function selectColor(c){selectedColor=c;renderOptions()}
-function selectSize(s){selectedSize=s;renderOptions()}
+
+function selectColor(c){
+  selectedColor=c;
+  renderOptions();
+
+  document.getElementById("modalArt").innerHTML =
+    c==="Off White"
+      ? `<img src="${whiteImage}" style="width:100%;height:440px;object-fit:cover;border-radius:8px;">`
+      : `<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%;">
+          <img src="file_00000000d31c8208b91f62dc8c6c846f.png" style="width:100%;height:220px;object-fit:cover;border-radius:8px;">
+          <img src="file_0000000082308211bf2ac0ff0a543a87.png" style="width:100%;height:220px;object-fit:cover;border-radius:8px;">
+          <img src="file_00000000e48c8211b8644332199cba57.png" style="width:100%;height:220px;object-fit:cover;border-radius:8px;">
+          <img src="file_000000008aac8211975505363741923e.png" style="width:100%;height:220px;object-fit:cover;border-radius:8px;">
+        </div>`;
+}
 document.getElementById("addModal").onclick=()=>{cart.push({...current,color:selectedColor,size:selectedSize});saveCart();closeModal();openCart()};
 function saveCart(){localStorage.setItem("vayraCart",JSON.stringify(cart));renderCart()}
 function renderCart(){
