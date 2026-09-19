@@ -22,10 +22,12 @@ function renderProducts(filter="all"){
     const el=document.createElement("article");
     el.className="product-card";
 
-    const image = p.name.includes("ORIGIN")
-            ? '<img src="file_00000000d31c8208b91f62dc8c6c846f.png" alt="VAYRA ORIGIN Oversized T-Shirt">'
-      : '<div class="product-visual"><div class="tee"><span>VAYRA</span></div></div>';
-
+    const image =
+  p.id===2
+    ? '<img src="file_00000000d31c8208b91f62dc8c6c846f.png" alt="ORIGIN Tee">'
+    : p.id===6
+    ? '<img src="file_0000000082308211bf2ac0ff0a543a87.png" alt="ORIGIN Black">'
+    : '<div class="product-visual"><div class="tee"><span>VAYRA</span></div></div>';
     el.innerHTML=`
       <div class="product-visual">${image}</div>
       <h3>${p.name}</h3>
