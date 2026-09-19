@@ -57,11 +57,18 @@ function openProduct(p){
           <img src="file_00000000e48c8211b8644332199cba57.png" style="width:100%;height:220px;object-fit:cover;border-radius:8px;">
           <img src="file_000000008aac8211975505363741923e.png" style="width:100%;height:220px;object-fit:cover;border-radius:8px;">
         </div>`
+      : p.id===6
+      ? `<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%;">
+          <img src="file_00000000944881fa9aaca149b816dfa1.png" style="width:100%;height:220px;object-fit:cover;border-radius:8px;">
+          <img src="file_0000000061ac81fd8fb8af1217b20950.png" style="width:100%;height:220px;object-fit:cover;border-radius:8px;">
+          <img src="file_0000000af4081faac8ec36d9c0ac207.png" style="width:100%;height:220px;object-fit:cover;border-radius:8px;grid-column:1 / -1;">
+        </div>`
       : `<div class="tee ${p.dark?"dark":""}"><span>VAYRA</span></div>`;
 
   renderOptions();
   document.getElementById("productModal").classList.add("show");
   document.getElementById("overlay").classList.add("show");
+}
 }
 function renderOptions(){
  document.getElementById("colorOptions").innerHTML=["Black","White"].map(c=>`<button class="${c===selectedColor?"selected":""}" onclick="selectColor('${c}')">${c}</button>`).join("");
