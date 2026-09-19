@@ -13,7 +13,7 @@ let cart = JSON.parse(localStorage.getItem("vayraCart") || "[]");
 let current = null;
 let selectedColor = "Black";
 const whiteImage="file_000000008a748211a62d9a65d759c75e.png";
-let selectedSize = "M";
+let selectedSize ="XS","S","M","L","XL","XXL";
 
 const productsEl=document.getElementById("products");
 function money(n){return "₹"+n.toLocaleString("en-IN")}
