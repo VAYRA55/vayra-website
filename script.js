@@ -12,6 +12,7 @@ const products = [
 let cart = JSON.parse(localStorage.getItem("vayraCart") || "[]");
 let current = null;
 let selectedColor = "Black";
+const whiteImage="file_000000008a748211a62d9a65d759c75e.png";
 let selectedSize = "M";
 
 const productsEl=document.getElementById("products");
