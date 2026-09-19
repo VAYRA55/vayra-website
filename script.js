@@ -2,7 +2,7 @@ const WHATSAPP_NUMBER = "91XXXXXXXXXX"; // Replace with your WhatsApp number, e.
 
 const products = [
  {id:1,name:"VAYRA Signature",price:1299,cat:"signature",desc:"The core VAYRA identity — oversized premium cotton with a clean signature mark.",dark:false},
- {id:2,name:"ORIGIN Tee",price:1499,cat:"limited",desc:"The first chapter of VAYRA. Minimal, bold and built for everyday rotation.",dark:true},
+ {id:2,name:"VAYRA ORIGIN Oversized Tee",price:499,cat:"limited",desc:"The first chapter of VAYRA. Minimal, bold and built for everyday rotation.",dark:true},
  {id:3,name:"VAYRA Essential",price:999,cat:"essential",desc:"A refined everyday essential with the VAYRA wordmark.",dark:false},
  {id:4,name:"VY-01",price:1399,cat:"signature",desc:"A numbered streetwear piece inspired by the beginning of the label.",dark:true},
  {id:5,name:"VAYRA Script",price:1199,cat:"essential",desc:"Soft minimal branding for a quieter expression of VAYRA.",dark:false},
