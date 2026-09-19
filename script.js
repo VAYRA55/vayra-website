@@ -72,7 +72,7 @@ function selectColor(c){
   renderOptions();
 
   document.getElementById("modalArt").innerHTML =
-    c==="Off White"
+    c==="White"
       ? `<img src="${whiteImage}" style="width:100%;height:440px;object-fit:cover;border-radius:8px;">`
       : `<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%;">
           <img src="file_00000000d31c8208b91f62dc8c6c846f.png" style="width:100%;height:220px;object-fit:cover;border-radius:8px;">
