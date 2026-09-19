@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VAYRA — ORIGIN</title>
+<meta name="description" content="VAYRA — Premium contemporary streetwear. ORIGIN collection.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <a class="logo" href="#home">VAYRA<span>®</span></a>
+  <nav>
+    <a href="#shop">Shop</a>
+    <a href="#story">Story</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <button class="cart-btn" id="cartBtn">Bag <span id="cartCount">0</span></button>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-copy">
+    <p class="eyebrow">VAYRA® / ORIGIN 01</p>
+    <h1>Wear your<br><em>identity.</em></h1>
+    <p class="hero-text">Premium contemporary streetwear, designed in India for a global generation.</p>
+    <a class="btn light" href="#shop">Explore Collection</a>
+  </div>
+  <div class="hero-art">
+    <div class="tee tee-hero"><span>VAYRA</span></div>
+    <div class="orb"></div>
+    <small>ORIGIN / 01</small>
+  </div>
+</section>
+
+<section class="ticker"><div>VAYRA® &nbsp; ORIGIN &nbsp; MADE FOR THE BOLD &nbsp; VAYRA® &nbsp; ORIGIN &nbsp; MADE FOR THE BOLD &nbsp;</div></section>
+
+<section class="section" id="shop">
+  <div class="section-head">
+    <div><p class="eyebrow">THE COLLECTION</p><h2>ORIGIN</h2></div>
+    <p>Six essentials. One identity.</p>
+  </div>
+  <div class="filters">
+    <button class="filter active" data-filter="all">All</button>
+    <button class="filter" data-filter="signature">Signature</button>
+    <button class="filter" data-filter="essential">Essential</button>
+    <button class="filter" data-filter="limited">Limited</button>
+  </div>
+  <div class="grid" id="products"></div>
+</section>
+
+<section class="manifesto">
+  <p class="eyebrow">VAYRA MANIFESTO</p>
+  <h2>Not made to blend in.<br><em>Made to become yours.</em></h2>
+</section>
+
+<section class="story section" id="story">
+  <div class="story-image"><div class="tee tee-story"><span>V</span></div></div>
+  <div class="story-copy">
+    <p class="eyebrow">OUR STORY</p>
+    <h2>Born in India.<br>Built for everywhere.</h2>
+    <p>VAYRA is a contemporary streetwear label built around clean silhouettes, considered details and an unapologetic point of view.</p>
+    <p>ORIGIN is the beginning — a foundation for everything VAYRA becomes next.</p>
+  </div>
+</section>
+
+<section class="newsletter" id="contact">
+  <p class="eyebrow">JOIN THE LIST</p>
+  <h2>Be first to know.</h2>
+  <form id="newsletterForm">
+    <input type="email" placeholder="Your email address" required>
+    <button class="btn dark" type="submit">Join VAYRA</button>
+  </form>
+  <p class="tiny" id="newsletterMsg"></p>
+</section>
+</main>
+
+<footer>
+  <div class="logo">VAYRA<span>®</span></div>
+  <p>Premium contemporary streetwear.</p>
+  <p>© 2026 VAYRA. All rights reserved.</p>
+</footer>
+
+<aside class="drawer" id="drawer">
+  <div class="drawer-head"><h3>Your Bag</h3><button id="closeCart">×</button></div>
+  <div id="cartItems"></div>
+  <div class="cart-bottom">
+    <div><span>Subtotal</span><strong id="cartTotal">₹0</strong></div>
+    <button class="btn dark full" id="checkoutBtn">Checkout</button>
+    <p class="tiny">Demo checkout. Add your WhatsApp number in <b>script.js</b> before launch.</p>
+  </div>
+</aside>
+<div class="overlay" id="overlay"></div>
+
+<div class="modal" id="productModal">
+  <button class="modal-close" id="modalClose">×</button>
+  <div class="modal-art" id="modalArt"></div>
+  <div class="modal-info">
+    <p class="eyebrow" id="modalCategory"></p>
+    <h2 id="modalName"></h2>
+    <p id="modalPrice"></p>
+    <p id="modalDesc"></p>
+    <label>Colour</label>
+    <div class="options" id="colorOptions"></div>
+    <label>Size</label>
+    <div class="options" id="sizeOptions"></div>
+    <button class="btn dark full" id="addModal">Add to Bag</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
